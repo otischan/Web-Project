@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<hr class="hr_red">
+<hr color="red">
+This is CTY web
+<hr color="blue">
+
+<fieldset>
+    <button (click)="get_date()">Get Date</button>
+    <button (click)="get_time()">Get Time</button>
+    <button (click)="get_date_time()">Get Date Time</button>
+    <div *ngIf="django_message">{{django_message}}</div>
+    <br>
+</fieldset>
+
+<hr color="red">
+
+<fieldset>
+<button (click)="change_str()">Click Me</button>
+<div *ngIf="local_str">{{local_str}}</div>
+</fieldset>
+<hr color="blue">

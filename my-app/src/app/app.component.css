@@ -1,0 +1,10 @@
+.hr_red{
+    color: red;
+    width: 3px;
+    border: 1px;
+    border-color: blue;
+}
+.hr_blue{
+    background-color: blue;
+    width: 3px;
+}
