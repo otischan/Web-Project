@@ -1,3 +1,4 @@
+
 .hr_red{
     color: red;
     width: 3px;
@@ -7,4 +8,11 @@
 .hr_blue{
     background-color: blue;
     width: 3px;
+}
+.input_label_style{
+    width:80px;
+}
+label{
+    width:100px;
+    display:inline-block;
 }

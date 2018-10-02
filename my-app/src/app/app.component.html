@@ -1,21 +1,49 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <hr class="hr_red">
 <hr color="red">
-This is CTY web
-<hr color="blue">
-
-<fieldset>
-    <button (click)="get_date()">Get Date</button>
-    <button (click)="get_time()">Get Time</button>
-    <button (click)="get_date_time()">Get Date Time</button>
-    <div *ngIf="django_message">{{django_message}}</div>
-    <br>
-</fieldset>
-
+这是OtisChan的WebSite
 <hr color="red">
 
+<hr color="blue">
 <fieldset>
-<button (click)="change_str()">Click Me</button>
-<div *ngIf="local_str">{{local_str}}</div>
+    <button (click)="get_date()">获取日期</button>
+    <button (click)="get_time()">获取时间</button>
+    <button (click)="get_date_time()">获取日期和时间</button>
+    <!-- <div *ngIf="django_message">{{django_message}}</div> -->
+    <br>
+    <fieldset *ngIf="django_json_date">
+        <label>日期:</label>
+        <p>{{django_json_date}}</p>
+    </fieldset>
+    <fieldset *ngIf="django_json_time">
+        <label>时间:</label>
+        <p>{{django_json_time}}</p>
+    </fieldset>
 </fieldset>
 <hr color="blue">
+
+<hr color="yellow">
+<fieldset>
+    <form>
+        <label>姓名:</label>
+        <input name="name" [(ngModel)]="input_name" required>
+    </form>
+    <form>
+        <label>性别:</label>
+        <input name="gender" [(ngModel)]="input_gender"> 
+    </form>
+    <form>
+        <label>电话:</label>
+        <input name="telephone" [(ngModel)]="input_telephone" required type="number">
+    </form>
+    <button type="button" (click)="input_submit()">提交你的信息</button>
+</fieldset>
+<hr color="yellow">
+
+<hr color="green">
+<!-- <fieldset>
+<button (click)="change_str()">喜不喜欢？</button>
+<div *ngIf="local_str">{{local_str}}</div>
+</fieldset> -->
+<hr color="green">
+
