@@ -32,7 +32,7 @@ export class AppComponent {
   get_date():void{
     this.django_loading=true;
     //this.http.post('http://127.0.0.1:8000/blog/date_time/','date')
-    this.http.post('http://47.97.204.165/django/date_time/','date')
+    this.http.post('http://47.99.204.118/django/date_time/','date')
     
       .subscribe((res:Response) => {
         this.django_loading=false;
@@ -50,7 +50,7 @@ export class AppComponent {
   get_time():void{
     this.django_loading=true;
     // this.http.post('http://127.0.0.1:8000/blog/date_time/','time')
-    this.http.post('http://47.97.204.165/django/date_time/','time')
+    this.http.post('http://47.99.204.118/django/date_time/','time')
       .subscribe((res:Response) => {
         this.django_loading=false;
         this.django_message=res["_body"];
@@ -66,7 +66,7 @@ export class AppComponent {
   }
   get_date_time():void{
     this.django_loading=true;
-    this.http.post('http://47.97.204.165/django/date_time/','date_time')
+    this.http.post('http://47.99.204.118/django/date_time/','date_time')
       .subscribe((res:Response) => {
         this.django_loading=false;
         this.django_message=res["_body"];
@@ -101,7 +101,7 @@ export class AppComponent {
     let options = new RequestOptions({ headers: headers });
     console.log("input to post : ", input);
     // this.http.post('http://127.0.0.1:8000/django/user_info_submit/',input,options)
-    this.http.post('http://47.97.204.165/django/user_info_submit/',input,options)
+    this.http.post('http://47.99.204.118/django/user_info_submit/',input,options)
     .subscribe((res:Response) => {
       this.django_message=res["_body"];
       var django_json=res.json();
